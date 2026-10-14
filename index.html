@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sanjana K.A. — Graphic & UI/UX Designer</title>
+<meta name="description" content="Portfolio of Sanjana K.A. Websites, brand systems, logo stories and event posters.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--raisin:#1A1423;--dp:#372549;--egg:#774C60;--red:#B75D69;--dog:#EACDC2;--vio:#4A3267;--blush:#DE638A;--pink:#F7B9C4;--mimi:#F3D9E5;--this:#C6BADE;
+--d:'Bagel Fat One','Arial Rounded MT Bold',sans-serif;--m:'Space Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--raisin);color:var(--mimi);font:400 18px/1.75 var(--m);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--d);font-weight:400;line-height:1}
+h2{font-size:clamp(3rem,9vw,8rem);letter-spacing:.01em}
+section{position:relative;padding:14vh 6vw;overflow:hidden}
+:focus-visible{outline:3px solid var(--blush);outline-offset:4px}
+#bar{position:fixed;top:0;left:0;height:6px;width:100%;background:var(--blush);transform-origin:0 50%;transform:scaleX(0);z-index:900}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:800;display:flex;gap:6px;background:var(--mimi);padding:6px;border-radius:99px;box-shadow:0 8px 30px #0006;font-weight:700;font-size:15px}
+nav a{padding:8px 16px;border-radius:99px;text-decoration:none;color:var(--raisin);transition:.2s}
+nav a:hover{background:var(--blush);color:#fff}
+@media(max-width:640px){nav a:nth-child(n+4){display:none}}
+/* hero */
+#hero{min-height:100vh;display:grid;place-items:center;text-align:center;background:var(--raisin) radial-gradient(#ffffff1c 1.5px,transparent 1.5px) 0 0/28px 28px}
+.word{display:flex;justify-content:center;gap:.02em;font:400 clamp(7rem,27vw,26rem)/.9 var(--d);position:relative;z-index:2}
+.word span{display:inline-block;transform:translateY(120%) rotate(12deg);transition:transform .9s cubic-bezier(.2,1.4,.3,1),filter .2s}
+.go .word span{transform:none}
+.word span:hover{transform:translateY(-4%) rotate(-6deg) scale(1.08)}
+.word span:nth-child(1){color:var(--blush);transition-delay:.05s}.word span:nth-child(2){color:var(--pink);transition-delay:.15s}.word span:nth-child(3){color:var(--this);transition-delay:.25s}.word span:nth-child(4){color:var(--mimi);transition-delay:.35s}
+.role{font-size:clamp(1.1rem,2.2vw,1.6rem);font-weight:700;margin-top:3vh;position:relative;z-index:2}
+.role small{display:block;font-weight:400;font-size:1rem;color:var(--this)}
+.chip{position:absolute;z-index:3;padding:8px 18px;border:2.5px solid currentColor;border-radius:10px;font-weight:700;font-size:1rem;background:#1A1423cc;backdrop-filter:blur(3px)}
+.st{position:absolute;z-index:1}
+/* about */
+#about{background:var(--mimi);color:var(--raisin)}
+#about h2{color:var(--dp);display:inline-block;position:relative}
+#about h2:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:12px;background:var(--blush);border-radius:99px;transform:rotate(-1.2deg)}
+.agrid{display:grid;grid-template-columns:1fr 1.5fr;gap:5vw;margin-top:9vh;align-items:start}
+.bubble{background:var(--blush);color:#fff;font:400 clamp(1.6rem,3vw,2.5rem)/1.15 var(--d);padding:28px 32px;border-radius:30px 30px 30px 6px;box-shadow:8px 8px 0 var(--dp)}
+.card{background:#fff;border:3px solid var(--raisin);border-radius:22px;padding:34px;box-shadow:10px 10px 0 var(--raisin)}
+.card p+p{margin-top:1.2em}
+mark{background:none;color:var(--vio);font-weight:700;border-bottom:3px solid var(--blush)}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:4vw;margin-top:12vh}
+.three h3{font-size:2.4rem;margin-bottom:14px}
+.three div:nth-child(1) h3{color:var(--vio)}.three div:nth-child(2) h3{color:var(--blush)}.three div:nth-child(3) h3{color:var(--red)}
+.three li{list-style:none;padding:6px 0;border-bottom:2px dashed #774C6055}
+.three b{display:block}
+@media(max-width:800px){.agrid{grid-template-columns:1fr}}
+/* projects */
+.proj{background:var(--bg);color:var(--fg)}
+.proj h2{color:var(--hc,var(--fg));-webkit-text-stroke:0}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin:3vh 0}
+.tags i{font-style:normal;font-weight:700;padding:6px 16px;border:2.5px solid currentColor;border-radius:99px;font-size:.95rem}
+.pbody{display:grid;grid-template-columns:1fr 1.7fr;gap:4vw;align-items:center;margin-top:5vh}
+.note{background:var(--note);color:var(--raisin);padding:34px 30px 28px;border-radius:6px;transform:rotate(-2deg);box-shadow:8px 10px 0 #0003;position:relative;transition:transform .3s}
+.note:hover{transform:rotate(0) translateY(-6px)}
+.note:before{content:"";position:absolute;top:-12px;left:50%;width:26px;height:26px;border-radius:50%;background:var(--blush);border:3px solid var(--raisin);transform:translateX(-50%)}
+.note h3{font-size:1.9rem;margin-bottom:10px}
+.frame{border:4px solid var(--raisin);border-radius:18px;overflow:hidden;background:#fff;box-shadow:14px 14px 0 var(--raisin);transition:transform .15s;cursor:zoom-in}
+.frame img{width:100%}
+@media(max-width:900px){.pbody{grid-template-columns:1fr}}
+#p1{--bg:var(--dp);--fg:var(--mimi);--note:var(--pink);--hc:var(--pink)}
+#p2{--bg:var(--red);--fg:#fff;--note:var(--mimi)}
+#p3{--bg:var(--this);--fg:var(--raisin);--note:#fff;--hc:var(--dp)}
+#p2 .frame,#p3 .frame{box-shadow:14px 14px 0 var(--raisin)}
+/* brands */
+#brands{background:var(--pink);color:var(--raisin)}
+#brands h2{color:var(--dp)}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:5vw;margin-top:9vh;align-items:start}
+.bi{background:#fff;border:3px solid var(--raisin);border-radius:18px;padding:16px 16px 22px;box-shadow:10px 10px 0 var(--raisin);transition:transform .2s;cursor:zoom-in}
+.bi:nth-child(1){transform:rotate(-2deg)}.bi:nth-child(2){transform:rotate(1.5deg) translateY(5vh)}.bi:nth-child(3){transform:rotate(-1deg)}
+.bi:hover{transform:rotate(0) scale(1.03)}
+.bi img{border-radius:10px;width:100%}
+.bi h3{font-size:2rem;margin:16px 0 4px;color:var(--vio)}
+/* posters */
+#posters{background:var(--raisin)}
+#posters h2{color:var(--blush)}
+.sub{color:var(--this);max-width:44ch;margin-top:2vh}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:3vw;margin-top:8vh;align-items:start}
+.col{display:grid;gap:3vw;will-change:transform}
+.col img{border-radius:12px;border:3px solid var(--mimi);cursor:zoom-in;transition:transform .3s}
+.col img:nth-child(odd){transform:rotate(-2deg)}.col img:nth-child(even){transform:rotate(2deg)}
+.col img:hover{transform:rotate(0) scale(1.05)}
+.broch{margin-top:14vh}
+.broch h3{font-size:clamp(2rem,5vw,4rem);color:var(--this);margin-bottom:4vh}
+.bro{display:flex;gap:2vw;overflow-x:auto;padding:10px 4px 24px;scroll-snap-type:x mandatory}
+.bro img{flex:0 0 min(70vw,360px);border-radius:12px;border:3px solid var(--mimi);scroll-snap-align:start;cursor:zoom-in}
+/* contact */
+#contact{min-height:100vh;display:flex;flex-direction:column;justify-content:center;background:var(--blush);color:var(--raisin)}
+#contact h2{font-size:clamp(4rem,15vw,15rem)}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:6vh}
+.btn{padding:16px 30px;border-radius:99px;border:3px solid var(--raisin);background:var(--raisin);color:var(--mimi);font-weight:700;text-decoration:none;transition:.25s}
+.btn:hover{background:var(--mimi);color:var(--raisin);transform:translateY(-4px) rotate(-2deg)}
+.btn.o{background:none;color:var(--raisin)}.btn.o:hover{background:var(--raisin);color:var(--mimi)}
+footer{padding:3vh 6vw;background:var(--raisin);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:15px;color:var(--this)}
+#lb{position:fixed;inset:0;background:#1A1423f2;z-index:950;display:none;overflow:auto;padding:4vh 4vw;cursor:zoom-out}
+#lb.on{display:block}#lb img{margin:auto;width:min(1400px,100%);border-radius:12px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.word span{transform:none}}
+@keyframes bob{50%{transform:translateY(-14px) rotate(6deg)}}
+.st{animation:bob 5s ease-in-out infinite}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><a href="#about">About</a><a href="#p1">Websites</a><a href="#brands">Brands</a><a href="#posters">Posters</a><a href="#contact">Contact</a></nav>
+
+<section id="hero">
+  <svg class="st" data-m="-50" style="left:10%;top:22%;width:90px" viewBox="0 0 100 100"><path fill="#C6BADE" d="M50 0l12 36 38 2-30 24 10 38-30-21-30 21 10-38L0 38l38-2z"/></svg>
+  <svg class="st" data-m="70" style="right:9%;bottom:20%;width:120px;animation-delay:-2s" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#F7B9C4" stroke-width="8" stroke-dasharray="3 14" stroke-linecap="round"/></svg>
+  <svg class="st" data-m="40" style="left:6%;bottom:16%;width:130px;animation-delay:-3s" viewBox="0 0 130 40"><path d="M3 20q16-24 32 0t32 0 32 0 28 0" fill="none" stroke="#DE638A" stroke-width="8" stroke-linecap="round"/></svg>
+  <div class="chip" data-m="30" style="left:14%;top:40%;color:var(--pink);transform:rotate(-6deg)">#UI/UX</div>
+  <div class="chip" data-m="-40" style="right:12%;top:26%;color:var(--this);transform:rotate(5deg)">#Branding</div>
+  <div class="chip" data-m="60" style="right:20%;bottom:30%;color:var(--blush);transform:rotate(-3deg)">Posters</div>
+  <div style="position:relative;z-index:2">
+    <div class="word" aria-label="Sana"><span>S</span><span>A</span><span>N</span><span>A</span></div>
+    <p class="role">Sanjana K.A. · Graphic &amp; UI/UX Designer<small>Mumbai, India · Scroll down</small></p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <div class="agrid">
+    <div class="bubble" data-p=".08">Make it clear first. Then make it loud.</div>
+    <div class="card">
+      <p>I'm a graphic and UI/UX designer with a <mark>Computer Engineering degree</mark> and a <mark>cybersecurity background</mark>. That mix makes me design with care: clear flows, honest interfaces, nothing confusing.</p>
+      <p>Right now I design screens and flows for AI-driven platform tools at <mark>Pipetech AI</mark>. Outside work I lead the design team at CSI-PCE, making posters, brochures and branding for college events.</p>
+    </div>
+  </div>
+  <div class="three">
+    <div><h3>Education</h3><ul><li><b>B.Tech, Computer Engineering</b>Pillai College of Engineering, University of Mumbai. 2022 – 2026</li></ul></div>
+    <div><h3>Skills</h3><ul><li><b>Design</b>Figma, Photoshop, Illustrator, Canva, wireframing, prototyping</li><li><b>Code</b>HTML, CSS, JavaScript, Python, SQL</li></ul></div>
+    <div><h3>Experience</h3><ul><li><b>UI/UX Designer, Pipetech AI</b>May 2026 – now</li><li><b>Creatives Head, CSI-PCE</b>Jul 2025 – now</li><li><b>Cybersecurity Intern, Maharashtra Cyber</b>Dec 2025 – May 2026</li></ul></div>
+  </div>
+</section>
+
+<section class="proj" id="p1">
+  <h2 data-p=".06">Pipetech<br>Redesign</h2>
+  <div class="tags"><i>Website</i><i>Design system 2.0</i><i>Figma</i></div>
+  <div class="pbody"><div class="note"><h3>What it is</h3><p>A redesign of the website for Pipetech AI Technologies, an AI engineering platform. It has a hero with stat cards, a client strip and a Solutions section built on a 12-product grid.</p></div>
+  <div class="frame tilt"><img src="assets/pipetech.webp" alt="Pipetech website redesign hero" loading="lazy" data-zoom></div></div>
+</section>
+
+<section class="proj" id="p2">
+  <h2 data-p=".06">Rashtra-<br>granth</h2>
+  <div class="tags"><i>Website</i><i>Mobile view</i><i>Enquiry form</i></div>
+  <div class="pbody"><div class="note"><h3>What it is</h3><p>A site for a theatre show that explains India's Constitution to schools and colleges. A clear hero leads straight into one enquiry form with radio buttons for every fixed choice.</p></div>
+  <div class="frame tilt"><img src="assets/rashtragranth.webp" alt="Rashtragranth website with enquiry form" loading="lazy" data-zoom></div></div>
+</section>
+
+<section class="proj" id="p3">
+  <h2 data-p=".06">PTeck<br>P&amp;ID PRO</h2>
+  <div class="tags"><i>Product UI</i><i>Onboarding</i><i>Figma</i></div>
+  <div class="pbody"><div class="note"><h3>What it is</h3><p>The "Create your workspace" flow of a P&amp;ID document analysis tool. Step one asks for the project's industry so the engineering rules are set up before work begins.</p></div>
+  <div class="frame tilt"><img src="assets/pteck.webp" alt="PTeck P&ID PRO select industry screen" loading="lazy" data-zoom></div></div>
+</section>
+
+<section id="brands">
+  <h2 data-p=".05">Brand systems<br>&amp; logo story</h2>
+  <div class="bgrid">
+    <div class="bi"><img src="assets/mbq.webp" alt="My Body Qode style sheet" loading="lazy" data-zoom><h3>My Body Qode</h3><p>Style sheet: gradient, type scale and UI parts for "Decode. Optimize. Evolve."</p></div>
+    <div class="bi"><img src="assets/shelterings.webp" alt="Shelterings logo story" loading="lazy" data-zoom><h3>Shelterings</h3><p>Logo story: a globe and two pins that form an S, for a property and hotel finder.</p></div>
+    <div class="bi"><img src="assets/redfibre.webp" alt="Red Fibre brand design system" loading="lazy" data-zoom><h3>Red Fibre</h3><p>Brand board for a deep-tech company: colour ratio, type, icons and social examples.</p></div>
+  </div>
+</section>
+
+<section id="posters">
+  <h2 data-p=".05">Posters &amp;<br>brochure</h2>
+  <p class="sub">Made as Creatives Head at CSI-PCE, Pillai College of Engineering. Click any image to zoom.</p>
+  <div class="pgrid">
+    <div class="col" data-s=".12"><img src="assets/p1.webp" alt="Study Circle: Competitive Programming poster" loading="lazy" data-zoom><img src="assets/p4.webp" alt="Inspire 3.0 poster" loading="lazy" data-zoom></div>
+    <div class="col" data-s="-.1"><img src="assets/p3.webp" alt="The Upside Down Interface poster" loading="lazy" data-zoom><img src="assets/p6.webp" alt="HackCelestial 2.0 poster" loading="lazy" data-zoom></div>
+    <div class="col" data-s=".2"><img src="assets/p2.webp" alt="Study Circle: Intro to Python poster" loading="lazy" data-zoom><img src="assets/p5.webp" alt="Code and Contribute poster" loading="lazy" data-zoom></div>
+  </div>
+  <div class="broch"><h3>HackCelestial 2.0 brochure</h3><div class="bro"><img src="assets/b1.webp" alt="Brochure cover" loading="lazy" data-zoom><img src="assets/b2.webp" alt="Brochure about page" loading="lazy" data-zoom><img src="assets/b3.webp" alt="Brochure prize pool page" loading="lazy" data-zoom><img src="assets/b4.webp" alt="Brochure theme page" loading="lazy" data-zoom></div></div>
+</section>
+
+<section id="contact">
+  <h2 data-p=".05">Say hi!</h2>
+  <p style="font-size:1.3rem;margin-top:3vh;max-width:36ch">Open to UI/UX and graphic design roles. Email me or grab my resume.</p>
+  <div class="links"><a class="btn" href="mailto:ajithsanjana47@gmail.com">ajithsanjana47@gmail.com</a><a class="btn o" href="assets/Sanjana_KA_Resume.pdf" download>Resume (PDF)</a><a class="btn o" href="https://linkedin.com/in/sanjana-k-a-133571259" target="_blank" rel="noopener">LinkedIn</a><a class="btn o" href="https://github.com/sanjana-ka" target="_blank" rel="noopener">GitHub</a></div>
+</section>
+<footer><span>© 2026 Sanjana K.A.</span><span>+91 81690 00924</span></footer>
+<div id="lb"></div>
+
+<script>
+const $=(s,c=document)=>[...c.querySelectorAll(s)],clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+setTimeout(()=>document.body.classList.add('go'),150);
+let mx=0,my=0;const ms=$('[data-m]'),ps=$('[data-p]'),cs=$('[data-s]'),bar=$('#bar')[0];
+addEventListener('mousemove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+let cx=0,cy=0;
+function frame(){
+  const y=scrollY;bar.style.transform=`scaleX(${y/(document.body.scrollHeight-innerHeight)})`;
+  if(!RM){
+    cx+=(mx-cx)*.08;cy+=(my-cy)*.08;
+    ms.forEach(el=>{const d=+el.dataset.m;el.style.translate=`${cx*d}px ${cy*d-y*d*.0025*10}px`});
+    ps.forEach(el=>{const r=el.parentElement.getBoundingClientRect();el.style.transform=`translateY(${(r.top+r.height/2-innerHeight/2)*-el.dataset.p}px)`});
+    cs.forEach(el=>{const r=el.parentElement.getBoundingClientRect();el.style.transform=`translateY(${(r.top+r.height/2-innerHeight/2)*-el.dataset.s}px)`});
+  }
+  requestAnimationFrame(frame)}
+frame();
+$('.tilt').forEach(el=>{el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform=`perspective(1000px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-6px)`});el.addEventListener('mouseleave',()=>el.style.transform='')});
+const lb=$('#lb')[0];
+document.addEventListener('click',e=>{const i=e.target.closest('[data-zoom]');if(i){lb.innerHTML=`<img src="${i.src}" alt="${i.alt}">`;lb.classList.add('on')}else lb.classList.remove('on')});
+addEventListener('keydown',e=>e.key==='Escape'&&lb.classList.remove('on'));
+</script>
+</body>
+</html>
